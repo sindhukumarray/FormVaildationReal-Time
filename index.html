@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Live Form Validation</title>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="signup-form">
+      <label>Full Name</label>
+      <input type="text" id="name" required />
+      <small class="error-msg" id="name-error"></small>
+
+      <label>Email</label>
+      <input type="email" id="email" required />
+      <small class="error-msg" id="email-error"></small>
+
+      <label>Password</label>
+      <input type="password" id="password" required />
+      <small class="error-msg" id="password-error"></small>
+
+      <label>Confirm Password</label>
+      <input type="password" id="confirm-password" required />
+      <small class="error-msg" id="confirm-password-error"></small>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
