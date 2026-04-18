@@ -17,10 +17,15 @@
       <input type="email" id="email" required />
       <small class="error-msg" id="email-error"></small>
 
-      <label>Password</label>
-      <input type="password" id="password" required />
-      <small class="error-msg" id="password-error"></small>
-      <small id="password-strength"></small>
+<label>Password</label>
+
+<div class="password-box">
+  <input type="password" id="password" required />
+  <span id="toggle-pass">👁️</span>
+</div>
+
+<small class="error-msg" id="password-error"></small>
+<small id="password-strength"></small>
 
       <label>Confirm Password</label>
       <input type="password" id="confirm-password" required />

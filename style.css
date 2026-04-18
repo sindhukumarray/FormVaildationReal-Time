@@ -82,3 +82,31 @@ button:hover {
   font-size: 0.8rem;
   font-weight: bold;
 }
+
+.password-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-box input {
+  width: 100%;
+  padding: 0.6rem;
+  padding-right: 40px; /* space for icon */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#toggle-pass {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+/* hover effect */
+#toggle-pass:hover {
+  color: #111;
+}
+

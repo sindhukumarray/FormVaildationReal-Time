@@ -10,6 +10,7 @@ const emailError = document.getElementById('email-error');
 const passError = document.getElementById('password-error');
 const confirmPassError = document.getElementById('confirm-password-error');
 const passStrength = document.getElementById('password-strength');
+const togglePass = document.getElementById('toggle-pass');
 
 // Validation functions
 function validateName() {
@@ -97,5 +98,16 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
   } else {
     alert('Registration successful!');
+  }
+});
+
+//password hide and show
+togglePass.addEventListener('click', () => {
+  if (passInput.type === "password") {
+    passInput.type = "text";
+    togglePass.textContent = "👁️‍🗨️";
+  } else {
+    passInput.type = "password";
+    togglePass.textContent = "👁️";
   }
 });
