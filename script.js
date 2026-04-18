@@ -31,10 +31,14 @@ function validateEmail() {
 }
 
 function validatePassword() {
-  if (passInput.value.length < 6) {
-    showError(passInput, passError, 'Password must be at least 6 characters');
+  const pattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/;
+
+  if (!pattern.test(passInput.value)) {
+    showError(passInput, passError, 
+      'Min 6 chars, 1 uppercase, 1 number, 1 special char');
     return false;
   }
+
   showSuccess(passInput, passError);
   return true;
 }
