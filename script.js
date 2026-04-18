@@ -9,6 +9,7 @@ const nameError = document.getElementById('name-error');
 const emailError = document.getElementById('email-error');
 const passError = document.getElementById('password-error');
 const confirmPassError = document.getElementById('confirm-password-error');
+const passStrength = document.getElementById('password-strength');
 
 // Validation functions
 function validateName() {
@@ -42,6 +43,20 @@ function validatePassword() {
   showSuccess(passInput, passError);
   return true;
 }
+// password-strength
+passInput.addEventListener('input', () => {
+  const value = passInput.value;
+
+  if (value.length === 0) {
+    passStrength.textContent = "";
+  } else if (value.length < 6) {
+    passStrength.textContent = "Weak Password ❌";
+  } else if (value.length < 8) {
+    passStrength.textContent = "Medium Password ⚠️";
+  } else {
+    passStrength.textContent = "Strong Password 💪";
+  }
+});
 
 function validateConfirmPassword() {
   if (confirmPassInput.value !== passInput.value) {
