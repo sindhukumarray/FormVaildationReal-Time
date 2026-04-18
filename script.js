@@ -62,10 +62,10 @@ function showSuccess(input, errorEl) {
 }
 
 // Real-time validation
-nameInput.addEventListener('blur', validateName);
-emailInput.addEventListener('blur', validateEmail);
-passInput.addEventListener('blur', validatePassword);
-confirmPassInput.addEventListener('blur', validateConfirmPassword);
+nameInput.addEventListener('input', validateName);
+emailInput.addEventListener('input', validateEmail);
+passInput.addEventListener('input', validatePassword);
+confirmPassInput.addEventListener('input', validateConfirmPassword);
 
 // Prevent form submit if any field is invalid
 form.addEventListener('submit', (e) => {
